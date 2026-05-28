@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== PRIMARY SEO ===== -->
+<title>Genexara — Bitrix24 Implementation & Vertical CRM for Southeast Asia</title>
+<meta name="description" content="Genexara builds and implements Bitrix24 CRM, industry-specific vertical CRM solutions, and AI-driven automation for SMBs across Southeast Asia. Bitrix24 partner based in Siem Reap, Cambodia.">
+<meta name="keywords" content="Bitrix24 partner, Bitrix24 implementation, CRM Cambodia, vertical CRM Southeast Asia, CRM automation, AI CRM, n8n integration, digital maturity audit, Siem Reap CRM">
+<meta name="author" content="Genexara">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://genexara.com/">
+
+<!-- ===== OPEN GRAPH ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Genexara — Bitrix24 Implementation & Vertical CRM for Southeast Asia">
+<meta property="og:description" content="Bitrix24 implementation, vertical CRM, and AI automation for growing businesses in Southeast Asia. Based in Siem Reap, Cambodia.">
+<meta property="og:url" content="https://genexara.com/">
+<meta property="og:site_name" content="Genexara">
+<meta property="og:locale" content="en_US">
+
+<!-- ===== TWITTER ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Genexara — Bitrix24 Implementation & Vertical CRM for SEA">
+<meta name="twitter:description" content="Bitrix24 implementation, vertical CRM, and AI automation for growing businesses in Southeast Asia.">
+
+<!-- ===== STRUCTURED DATA (Schema.org) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Genexara",
+  "description": "Bitrix24 implementation, industry-specific vertical CRM solutions, AI-driven CRM automation, training, and digital maturity audits for SMBs in Southeast Asia.",
+  "url": "https://genexara.com",
+  "email": "info@genexara.com",
+  "telephone": "+855 87 503 491",
+  "areaServed": ["Cambodia", "Vietnam", "Malaysia", "Thailand", "Southeast Asia"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Siem Reap",
+    "addressCountry": "KH"
+  },
+  "knowsAbout": ["Bitrix24", "CRM implementation", "Vertical CRM", "Business process automation", "AI in CRM", "n8n", "Digital transformation"],
+  "serviceType": ["Bitrix24 Implementation", "Vertical CRM Development", "CRM Automation", "Business Consulting", "Digital Maturity Audit", "CRM Training"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+855 87 503 491",
+    "email": "info@genexara.com",
+    "contactType": "sales",
+    "availableLanguage": ["English", "Russian"]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0d0f14;
+  --bg-2:#11141b;
+  --panel:#161a23;
+  --ink:#f4f1ea;
+  --ink-dim:#a7a294;
+  --gold:#c9a24b;
+  --gold-bright:#e6c478;
+  --jade:#3f8e7d;
+  --line:rgba(201,162,75,.18);
+  --display:'Fraunces',Georgia,serif;
+  --body:'Outfit',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+a{color:inherit;text-decoration:none}
+
+/* ===== NAV ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 36px;
+  backdrop-filter:blur(14px);
+  background:rgba(13,15,20,.55);
+  border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--display);font-weight:600;font-size:1.35rem;letter-spacing:.04em}
+.brand b{color:var(--gold)}
+.nav-links{display:flex;gap:30px;align-items:center;font-size:.92rem;color:var(--ink-dim)}
+.nav-links a{transition:color .25s}
+.nav-links a:hover{color:var(--gold-bright)}
+.nav-cta{border:1px solid var(--gold);color:var(--gold-bright);padding:9px 20px;border-radius:40px;font-size:.85rem;letter-spacing:.04em;transition:.3s}
+.nav-cta:hover{background:var(--gold);color:#0d0f14}
+@media(max-width:780px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ===== HERO ===== */
+header{
+  min-height:100vh;display:flex;align-items:center;
+  position:relative;padding-top:80px;
+  background:
+    radial-gradient(900px 600px at 78% 10%, rgba(201,162,75,.10), transparent 60%),
+    radial-gradient(700px 500px at 10% 90%, rgba(63,142,125,.10), transparent 60%),
+    var(--bg);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:26px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.04;letter-spacing:-.015em;
+}
+h1 em{font-style:italic;color:var(--gold-bright)}
+.lede{color:var(--ink-dim);font-size:1.12rem;max-width:38ch;margin:28px 0 36px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  font-size:.95rem;letter-spacing:.03em;padding:15px 30px;border-radius:46px;
+  transition:transform .25s, box-shadow .3s;font-weight:500;
+}
+.btn-primary{background:linear-gradient(120deg,var(--gold),var(--gold-bright));color:#0d0f14}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,162,75,.3)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
+
+/* hero card */
+.hero-card{
+  background:linear-gradient(160deg,var(--panel),var(--bg-2));
+  border:1px solid var(--line);border-radius:22px;padding:34px;
+  position:relative;overflow:hidden;
+}
+.hero-card::after{content:"";position:absolute;top:-40%;right:-30%;width:300px;height:300px;background:radial-gradient(circle,rgba(201,162,75,.18),transparent 70%)}
+.hero-card h3{font-family:var(--display);font-weight:500;font-size:1.25rem;margin-bottom:6px}
+.hero-card p{color:var(--ink-dim);font-size:.92rem;margin-bottom:22px}
+.stat-row{display:flex;gap:26px;border-top:1px solid var(--line);padding-top:22px}
+.stat .n{font-family:var(--display);font-size:1.9rem;color:var(--gold-bright);line-height:1}
+.stat .l{font-size:.74rem;color:var(--ink-dim);letter-spacing:.05em;text-transform:uppercase;margin-top:6px}
+
+/* ===== SECTION SHELL ===== */
+section{padding:104px 0;position:relative}
+.sec-head{max-width:60ch;margin-bottom:56px}
+.sec-tag{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--jade);margin-bottom:14px;display:block}
+.sec-head h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4vw,2.9rem);line-height:1.1;letter-spacing:-.01em}
+.sec-head p{color:var(--ink-dim);margin-top:18px;font-size:1.05rem}
+
+/* ===== SERVICES ===== */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.svc{
+  background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px;
+  transition:transform .3s,border-color .3s,background .3s;position:relative;
+}
+.svc:hover{transform:translateY(-5px);border-color:var(--gold);background:var(--bg-2)}
+.svc .ix{font-family:var(--display);font-size:.95rem;color:var(--gold);margin-bottom:18px;letter-spacing:.1em}
+.svc h3{font-family:var(--display);font-weight:500;font-size:1.32rem;margin-bottom:10px;line-height:1.2}
+.svc p{color:var(--ink-dim);font-size:.94rem}
+
+/* ===== APPROACH ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+.step{padding:32px 26px;border-right:1px solid var(--line);background:var(--bg-2)}
+.step:last-child{border-right:none}
+.step .num{font-family:var(--display);font-size:2.4rem;color:var(--gold);opacity:.55;line-height:1}
+.step h4{font-family:var(--display);font-weight:500;font-size:1.1rem;margin:14px 0 8px}
+.step p{color:var(--ink-dim);font-size:.88rem}
+
+/* ===== VERTICALS ===== */
+.vert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:700px){.vert-grid{grid-template-columns:1fr}}
+.vert{display:flex;gap:18px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+.vert .dot{width:10px;height:10px;border-radius:50%;background:var(--jade);margin-top:8px;flex-shrink:0;box-shadow:0 0 14px var(--jade)}
+.vert h4{font-family:var(--display);font-weight:500;font-size:1.12rem;margin-bottom:5px}
+.vert p{color:var(--ink-dim);font-size:.9rem}
+
+/* ===== CASES ===== */
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:820px){.case-grid{grid-template-columns:1fr}}
+.case{
+  background:linear-gradient(160deg,var(--panel),var(--bg-2));
+  border:1px solid var(--line);border-radius:20px;padding:34px;
+  position:relative;overflow:hidden;transition:border-color .3s,transform .3s;
+}
+.case:hover{border-color:var(--gold);transform:translateY(-4px)}
+.case::after{content:"";position:absolute;top:-30%;right:-20%;width:240px;height:240px;background:radial-gradient(circle,rgba(63,142,125,.14),transparent 70%);pointer-events:none}
+.case .kicker{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jade);margin-bottom:14px}
+.case h3{font-family:var(--display);font-weight:500;font-size:1.4rem;line-height:1.18;margin-bottom:20px}
+.case .blk{margin-bottom:16px}
+.case .blk .lab{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.case .blk p{color:var(--ink-dim);font-size:.94rem}
+.case .results{display:flex;gap:24px;border-top:1px solid var(--line);margin-top:22px;padding-top:22px;flex-wrap:wrap}
+.case .results .r .n{font-family:var(--display);font-size:1.55rem;color:var(--gold-bright);line-height:1}
+.case .results .r .l{font-size:.72rem;color:var(--ink-dim);letter-spacing:.04em;text-transform:uppercase;margin-top:5px;max-width:16ch}
+.case .disclaimer{font-size:.72rem;color:var(--ink-dim);opacity:.7;margin-top:18px;font-style:italic}
+
+/* ===== WHY / BITRIX ===== */
+.why{background:linear-gradient(150deg,var(--bg-2),var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:820px){.why-grid{grid-template-columns:1fr;gap:34px}}
+.why ul{list-style:none;margin-top:10px}
+.why li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+.why li:last-child{border-bottom:none}
+.why li .chk{color:var(--gold);font-family:var(--display);flex-shrink:0}
+.why li b{font-weight:500;color:var(--ink)}
+.why li span{color:var(--ink-dim);font-size:.93rem;display:block;margin-top:2px}
+.badge{
+  display:inline-flex;flex-direction:column;gap:6px;background:var(--panel);
+  border:1px solid var(--gold);border-radius:20px;padding:34px;text-align:center;
+}
+.badge .k{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.badge .v{font-family:var(--display);font-size:1.5rem}
+
+/* ===== CONTACT ===== */
+.contact{text-align:center}
+.contact h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.1}
+.contact p{color:var(--ink-dim);max-width:50ch;margin:20px auto 40px;font-size:1.08rem}
+.contact-cards{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.cc{
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:22px 30px;min-width:230px;transition:.3s;
+}
+.cc:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cc .k{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--jade);margin-bottom:8px}
+.cc .v{font-family:var(--display);font-size:1.2rem;color:var(--gold-bright)}
+
+/* ===== FOOTER ===== */
+footer{border-top:1px solid var(--line);padding:46px 0;color:var(--ink-dim);font-size:.85rem}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+.foot-grid .brand{font-size:1.1rem}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">Gen<b>exara</b></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#verticals">Verticals</a>
+    <a href="#cases">Cases</a>
+    <a href="#why">Why Bitrix24</a>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+  <div class="wrap hero-grid">
+    <div class="reveal in">
+      <span class="eyebrow">Bitrix24 Studio · Siem Reap, Cambodia</span>
+      <h1>We turn business chaos into <em>managed systems</em>.</h1>
+      <p class="lede">Genexara designs and implements Bitrix24 CRM, industry-specific vertical solutions, and AI-driven automation for growing businesses across Southeast Asia.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start a project</a>
+        <a href="#services" class="btn btn-ghost">Explore services</a>
+      </div>
+    </div>
+    <div class="hero-card reveal in" style="transition-delay:.15s">
+      <h3>Bitrix24, end to end</h3>
+      <p>From discovery and architecture to automation, integration, and team onboarding — delivered by certified practitioners.</p>
+      <div class="stat-row">
+        <div class="stat"><div class="n">100%</div><div class="l">Cloud-based</div></div>
+        <div class="stat"><div class="n">SEA</div><div class="l">Regional focus</div></div>
+        <div class="stat"><div class="n">EN·RU</div><div class="l">Working languages</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">What we do</span>
+      <h2>Five ways we make Bitrix24 work for you</h2>
+      <p>Standard platform first, marketplace second, custom only when it earns its place — so you ship faster and own less technical debt.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="ix">01</div><h3>Bitrix24 Implementation</h3><p>Turnkey setup: CRM pipelines, smart processes, automations, open channels, and analytics — configured around how your business actually runs.</p></div>
+      <div class="svc reveal" style="transition-delay:.08s"><div class="ix">02</div><h3>Vertical CRM for SEA</h3><p>Pre-packaged, industry-specific CRM templates built for Southeast Asian markets — property management, beauty, custom production, and more.</p></div>
+      <div class="svc reveal" style="transition-delay:.16s"><div class="ix">03</div><h3>AI in CRM</h3><p>Practical AI scenarios inside Bitrix24: conversation summaries, lead scoring, field extraction, and call analytics — AI drafts, your team decides.</p></div>
+      <div class="svc reveal"><div class="ix">04</div><h3>Training & Consulting</h3><p>We move teams from "we have a CRM" to "we run on it" — structured onboarding, working regulations, and ongoing business consulting.</p></div>
+      <div class="svc reveal" style="transition-delay:.08s"><div class="ix">05</div><h3>Digital Maturity Audit</h3><p>A structured assessment of where your processes leak time, data, and money — with a clear, prioritized roadmap to fix it.</p></div>
+      <div class="svc reveal" style="transition-delay:.16s"><div class="ix">+</div><h3>Integrations & Automation</h3><p>REST API, webhooks, and n8n middleware connecting Bitrix24 to the tools you already use — messengers, marketplaces, telephony, and beyond.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">How we work</span>
+      <h2>A clear path from question to result</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">1</div><h4>Discovery</h4><p>We map your real processes — as-is and to-be — and find where value is being lost.</p></div>
+      <div class="step"><div class="num">2</div><h4>Architecture</h4><p>Pipelines, entities, fields, and roles designed and agreed before a single setting is touched.</p></div>
+      <div class="step"><div class="num">3</div><h4>Build</h4><p>Configuration, automation, AI scenarios, and integrations — assembled and tested.</p></div>
+      <div class="step"><div class="num">4</div><h4>Launch</h4><p>Data migration, team training, and a managed go-live so the system actually gets used.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Industry templates</span>
+      <h2>Vertical CRM, built for the region</h2>
+      <p>Reusable solutions tuned to the realities of Southeast Asian SMBs — and to the channels your customers actually use.</p>
+    </div>
+    <div class="vert-grid">
+      <div class="vert reveal"><div class="dot"></div><div><h4>Property Management</h4><p>Lead-to-lease pipelines, tenant lifecycle, and maintenance workflows for rental and real-estate operators.</p></div></div>
+      <div class="vert reveal" style="transition-delay:.08s"><div class="dot"></div><div><h4>Beauty & Wellness</h4><p>Booking, client history, loyalty, and content workflows for studios and salons.</p></div></div>
+      <div class="vert reveal" style="transition-delay:.16s"><div class="dot"></div><div><h4>Custom Production SMB</h4><p>Order-to-delivery control for project-based manufacturing — quotes, production routes, and quality checks.</p></div></div>
+      <div class="vert reveal" style="transition-delay:.24s"><div class="dot"></div><div><h4>Service & Tourism</h4><p>Inquiry handling, multi-channel communication, and follow-up for service and travel businesses.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Selected work</span>
+      <h2>From chaos to a system that runs itself</h2>
+      <p>Anonymized snapshots of recent engagements. Specific results depend on each business — these show the shape of the transformation.</p>
+    </div>
+    <div class="case-grid">
+
+      <div class="case reveal">
+        <div class="kicker">Custom Production · SMB</div>
+        <h3>A custom-case manufacturer drowning in chat messages</h3>
+        <div class="blk">
+          <div class="lab">The challenge</div>
+          <p>Every order lived across Telegram, WhatsApp, voice notes, and people's memory. Orders stalled on the shop floor with no owner, status was impossible to read, and the business scaled only as far as the founder could personally track it.</p>
+        </div>
+        <div class="blk">
+          <div class="lab">What we built</div>
+          <p>A single Bitrix24 order pipeline with a dedicated production smart-process — stages, owners, and deadlines per workshop step. Mobile status updates for floor staff, automated task creation, SLA escalations, and AI summaries of long client chats and voice notes.</p>
+        </div>
+        <div class="results">
+          <div class="r"><div class="n">1</div><div class="l">Source of truth per order</div></div>
+          <div class="r"><div class="n">0</div><div class="l">Orders lost on the shelf</div></div>
+          <div class="r"><div class="n">Mobile</div><div class="l">Floor team works from phones</div></div>
+        </div>
+        <div class="disclaimer">Client details anonymized at the client's request.</div>
+      </div>
+
+      <div class="case reveal" style="transition-delay:.1s">
+        <div class="kicker">Beauty & Wellness · Studio</div>
+        <h3>A new nail studio building a client base from day one</h3>
+        <div class="blk">
+          <div class="lab">The challenge</div>
+          <p>A founder-led studio launching by referral needed to capture every inquiry, never lose a booking, and turn first-time visitors into regulars — without a heavy front desk or expensive ad spend.</p>
+        </div>
+        <div class="blk">
+          <div class="lab">What we built</div>
+          <p>A Bitrix24 setup tuned for beauty: multi-channel inquiry capture from messengers, a booking and client-history pipeline, automated reminders and follow-ups, and a loyalty workflow for founding members — packaged as a reusable vertical template.</p>
+        </div>
+        <div class="results">
+          <div class="r"><div class="n">All</div><div class="l">Inquiries captured in one place</div></div>
+          <div class="r"><div class="n">Auto</div><div class="l">Reminders &amp; follow-ups</div></div>
+          <div class="r"><div class="n">Reusable</div><div class="l">Beauty vertical template</div></div>
+        </div>
+        <div class="disclaimer">Client details anonymized at the client's request.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="why">
+  <div class="wrap why-grid">
+    <div class="reveal">
+      <span class="sec-tag">The platform</span>
+      <h2 style="font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.12;letter-spacing:-.01em">Why we build on Bitrix24</h2>
+      <ul>
+        <li><span class="chk">✦</span><div><b>One system, not ten tools</b><span>CRM, tasks, communication, documents, and analytics live in a single workspace.</span></div></li>
+        <li><span class="chk">✦</span><div><b>Cloud-first, fast to launch</b><span>No servers to maintain — your team starts working in weeks, not quarters.</span></div></li>
+        <li><span class="chk">✦</span><div><b>Scales with you</b><span>From a small team to enterprise, the platform grows without re-platforming.</span></div></li>
+        <li><span class="chk">✦</span><div><b>AI built in</b><span>Native AI scenarios accelerate sales, support, and back-office work.</span></div></li>
+      </ul>
+    </div>
+    <div class="reveal" style="display:flex;justify-content:center;transition-delay:.12s">
+      <div class="badge">
+        <div class="k">Bitrix24</div>
+        <div class="v">Implementation<br>Partner</div>
+        <div class="k" style="color:var(--ink-dim);margin-top:6px">Southeast Asia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap reveal">
+    <span class="sec-tag" style="display:block">Get in touch</span>
+    <h2>Let's design your system.</h2>
+    <p>Tell us where your processes hurt most. We'll show you what a managed Bitrix24 setup looks like for your business.</p>
+    <div class="contact-cards">
+      <a class="cc" href="mailto:info@genexara.com"><div class="k">Email</div><div class="v">info@genexara.com</div></a>
+      <a class="cc" href="tel:+85587503491"><div class="k">Phone</div><div class="v">+855 87 503 491</div></a>
+      <a class="cc" href="https://wa.me/85587503491" target="_blank" rel="noopener"><div class="k">WhatsApp / Telegram</div><div class="v">+855 87 503 491</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="brand">Gen<b>exara</b></div>
+    <div>Bitrix24 implementation &amp; vertical CRM · Siem Reap, Cambodia · Serving Southeast Asia</div>
+    <div>© <span id="yr"></span> Genexara. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
